@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="result-container"></div>
+    <script>
+        // Function to calculate and display the sum
+        function displaySum(a, b) {
+            // Calculate the sum
+            const sum = a + b;
+
+            // Create an h1 element
+            const h1Element = document.createElement("h1");
+
+            // Set the content of the h1 element
+            h1Element.textContent = `The answer for adding ${a} and ${b} is ${sum}`;
+
+            // Append the h1 element to the DOM
+            const container = document.getElementById("result-container");
+            container.innerHTML = ""; // Clear previous content
+            container.appendChild(h1Element);
+        }
+
+        // Example usage
+        displaySum(4, 6);
+    </script>
+</body>
+</html>
